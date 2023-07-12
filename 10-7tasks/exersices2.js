@@ -6,23 +6,27 @@ equal or between 70 and 79 ===> C
 equal or between 80 and 89 ===> B
 equal or between 90 and 100 ===> A
 */
-let arry_num;
-arry_num=[56,61,73,84,99];
-for(i=0 ;i<arry_num.length ; i++){
-if(arry_num[i] >=50 && arry_num[i]<=59){
-    console.log("E")
-} else if(arry_num[i] >=60 && arry_num[i]<=69){
-    console.log("D")
+// 56,61,73,84,99,34
+let mark;
+ mark = window.prompt("input your mark","0 t0 100")
+if(mark >=50 && mark<=59){
+    alert("E")
+} else if(mark >=60 && mark<=69){
+    alert("D")
 
-}else if(arry_num[i] >=70 && arry_num[i]<=79){
-    console.log("C")
+}else if(mark >=70 && mark<=79){
+    alert("C")
 
-}else if(arry_num[i] >=80 && arry_num[i]<=89){
-    console.log("B")
+}else if(mark >=80 && mark<=89){
+    alert("B")
 
-}else if(arry_num[i] >=90 && arry_num[i]<=100){
-    console.log("A")
+}else if(mark >=90 && mark<=100){
+    alert("A")
 
-}
+}else if(mark < 50){
+    alert("Fail")
+}else(
+    alert("YOU Dont put mark")
+)
 
-}
+

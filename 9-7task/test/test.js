@@ -1,28 +1,18 @@
-// x= 6;
-// y=4;
-// console.log(x%y)
-// console.log(2 < "John")
-// const arry=["Ahmad", "John", 'Altamimi']
-// // s="A"
-// // console.log(s.charCodeAt(0) - 97)
-// // console.log(s.charCodeAt(0) - 65)
+let x=6;
+let y=7
+function ahmad(x=5 ,...y){ // parameters
+    console.log(" local -----the value of x is"+" " + x + " and y is" + y +r[i])
+        return x * y;
+} 
 
-// if (y>x){
-//     console.log(`x lrager then y`)
-// } else{
-//     console.log(`y lrager then x`)
-
-// }
-// a_name1="";
-// for(i=0;i<=arry.length;i++){
-//     if(arry[i].startsWith("A")){
-// a_name1 +=arry[i]; 
-// document.write(a_name1);
-// }
-// }
-// document.write (Math.pow(y,2))
-console.log("cat"&&"dog")
-if("cat"&&"dog"){
-    
-    console.log("ahmad")
+console.log(ahmad(10, 3,2));
+// console.log(ahmad);
+console.log("globle ----- the value of x is"+" " + x + " and y is" + y)
+// __________________Object________________
+// this is not a variable. it keyword refers to an object.
+const pearson ={name:"ahmad",age:" 15",barithday:{
+    year:"1999"
 }
+
+}
+console.log(pearson.barithday.year) //argumaent
