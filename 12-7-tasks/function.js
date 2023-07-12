@@ -167,7 +167,7 @@ if (age>=20){
   return `please come back after ${X}years to get one`
 }
 }
-console.log(canIGetADrivingLicense(17))
+console.log(canIGetADrivingLicense(17));
 /*
 10
 Write a function called sameLength
@@ -182,14 +182,15 @@ Ex: sameLength("tree","clue")
 Ex: sameLength("tree","car")
 => false
 */
-function sameLength(s, l){
-  if(s.length === l.length){
+function sameLength(same, Leng){
+  if( same.length == l.length){
     console.log("have the same length")
   }else{
     console.log("False")
 
   }
 }
+sameLength("tree","clue")
 /*
 11
 Write a function called largerNubmer
@@ -413,8 +414,9 @@ Ex: randomNumber()
 
 */
 function random(){
-  
+return  Math.random()
 }
+console.log(random())
 /*
 21
 Write a function called randomBetweenNumbers
@@ -429,7 +431,11 @@ Ex: randomBetweenNumbers(3,100)
 => 23
 
 */
+function randomBetweenNumbers(x,y){
+  return  (Math.random() *y)+x
 
+}
+console.log(randomBetweenNumbers(1,8))
 
 /*
 22
