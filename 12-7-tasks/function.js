@@ -183,7 +183,7 @@ Ex: sameLength("tree","car")
 => false
 */
 function sameLength(same, Leng){
-  if( same.length == l.length){
+  if( same.length == Leng.length){
     console.log("have the same length")
   }else{
     console.log("False")
@@ -458,25 +458,24 @@ Ex: scoreInUniversty(71)
 => "C"
 */
 
-function scoreInUniversty(){
+function scoreInUniversty(x){
 if(x>=0 && x<=49){
 console.log("F")
-} else if (x>=50 && x<=69){
+} else if (x<=69){
   console.log("D")
 
-} else if (x>=70 && x<=69){
+} else if (x<=69){
   console.log("C")
 
-}else if (x>=85 && x<=94){
+}else if ( x<=94){
   console.log("B")
 
 } else {
   console.log("A")
-
 }
-
 }
-
+scoreInUniversty(95)
+scoreInUniversty(15)
 // 23
 // Write a function called counter
 // that will returns a number bigger
@@ -493,10 +492,10 @@ console.log("F")
 // => 3
 
 // */
-let i=0
+let count=0
 function counter (){
-  ++i
-return console.log(i) 
+  ++count
+return console.log(count) 
 }
 counter()
 counter()
@@ -534,8 +533,8 @@ Ex: counter()
 => 1
 */
 function resetCounter(){
- console.log( i+'and the counter reset now' )
- return i=0
+ console.log( count+'and the counter reset now' )
+ return count=0
 }
 resetCounter()  
 counter()
