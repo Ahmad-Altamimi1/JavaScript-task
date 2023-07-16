@@ -31,9 +31,5 @@ font-weight:bold;
 img.style.width="150px"
 
 }}
-// elemant1.appendChild(par)
-// `<p>${namee[i]}</p>
-// <p>${age[i]}</p>
-// <img src="../../../smiley.gif" alt="">`
-// let par = document.createTextNode();
+
 

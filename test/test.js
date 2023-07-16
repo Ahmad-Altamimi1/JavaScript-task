@@ -1,44 +1,35 @@
-// // ________________________________
-// document.body.onload = addElement;
+// window.localStorage.setItem("Name", "Ahmad")
+// let name1 = localStorage.getItem("Name")
+// console.log(name1)
+// let name2 = window.localStorage.removeItem("Name"  )
+// console.log(name1)
+// localStorage.clear()
+// /**
+//  * Click "Cal" on expiry date
+//  */
+// // Example 1: Matching a pattern in a string
+// const string = "Hello, World!";
+// const pattern = /Hello/;
+// const result = pattern.test(string);
+// console.log(result); // Output: true
 
-// function addElement() {
-//   // create a new div element
-//   const newDiv = document.createElement("div");
+// // Example 2: Extracting matches from a string
+// const sentence = "I have 3 cats and 2 dogs.";
+// const numberPattern = /\d+/g;
+// console.log("this is number pattren" + numberPattern)
+// const numbers = sentence.match(numberPattern);
+// console.log(numbers); // Output: [ '3', '2' ]
 
-//   // and give it some content
-//   const newContent = document.createTextNode("Hi there and greetings!");
+// // Example 3: Replacing matches in a string
+// const text = "I love apples and oranges.";
+// const fruitPattern = /apples|oranges/;
+// const newText = text.replace(fruitPattern, "bananas");
+// console.log(newText); // Output: "I love bananas and bananas."
 
-//   // add the text node to the newly created div
-//   newDiv.appendChild(newContent);
-
-//   // add the newly created element and its content into the DOM
-//   const currentDiv = document.getElementById("div1");
-//   document.body.insertBefore(newDiv, currentDiv);
-// }
-
-
-// let classs= document.getElementsByClassName("moh");
-// console.log(classs)
-// console.log(classs[0])
-// let iddd =document.getElementById("ahmad")
-// console.log(iddd);
-// let qyer = document.querySelector(".moh")
-// let qyerall = document.querySelectorAll(".moh")
-// console.log(qyer)
-// qyerall[1].innerHTML="yesssssssss"
-// console.log(qyerall[1])
-// let foooor = document.forms;
-//  delete foooor[0].ahhh.value
-// console.log(foooor[0])
-// let lll = document.links
-// console.log(lll[0])
-// let qyerqqq = document.querySelector("form")
-// console.log(qyerqqq);
-// let  new_ele =document.createElement("span");
-// new_ele.removeAttribute("class")
-// new_ele.innerHTML="hello world"
-// document.body.appendChild(new_ele)
-// // let contant=document.createTextNode("<h1>ahmad</h1>")
-// // new_ele.appendChild(contant);
-
-// // ______
+// // Example 4: Splitting a string based on a pattern
+// const paragraph = "This is a paragraph.\nIt has multiple lines.\n\nThe end.";
+// const lines = paragraph.split(/\n+/);
+// console.log(lines); // Output: [ 'This is a paragraph.', 'It has multiple lines.', 'The end.' ]
+let name11 = "Ahmad MOHammad Altamimi "
+re=/ahmad/i
+console.log(name11.match(re))
