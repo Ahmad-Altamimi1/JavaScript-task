@@ -4,10 +4,11 @@ let td=tbody.value
 let htt = new XMLHttpRequest();
 htt.open("GET","task.json")
 button.onclick = function(){
-    let ahmad;
+    let ahmad = "";
     const httjs =JSON.parse(htt.responseText);
     for (let i = 0; i<3; i++) {
- ahmad +=` <tr >
+ ahmad +=`
+  <tr >
    <td>${httjs.names[i]}</td>
    <td>${httjs.Age[i]}</td>
    <td>${httjs.major[i]} </td>
@@ -20,7 +21,7 @@ button.onclick = function(){
  
  
 }
-tbody.innerHTML=ahmad
+tbody.innerHTML=ahmad;
 
 }
 htt.send();
