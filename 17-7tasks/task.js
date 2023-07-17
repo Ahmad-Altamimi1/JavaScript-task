@@ -1,13 +1,13 @@
 let button = document.getElementById("button")
-let table = document.getElementsByClassName("table")
 let tbody=document.getElementById("tbody")
 let td=tbody.value
 let htt = new XMLHttpRequest();
 htt.open("GET","task.json")
 button.onclick = function(){
-    for (let i = 0; i <3; i++) {
-        const httjs =JSON.parse(htt.responseText);
-   tbody.innerHTML=`   <tr >
+    let ahmad;
+    const httjs =JSON.parse(htt.responseText);
+    for (let i = 0; i<3; i++) {
+ ahmad +=` <tr >
    <td>${httjs.names[i]}</td>
    <td>${httjs.Age[i]}</td>
    <td>${httjs.major[i]} </td>
@@ -17,9 +17,11 @@ button.onclick = function(){
    </td>
  </tr>
  <br>`
- console.log(names[i])
-    
+ 
+ 
 }
+tbody.innerHTML=ahmad
 
 }
 htt.send();
+
