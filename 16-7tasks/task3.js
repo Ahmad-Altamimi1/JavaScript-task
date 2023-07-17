@@ -5,7 +5,9 @@ fname.addEventListener("input", function () {
     const regexfname = /^[^\d\s]+$/;
     ///[A-Za-z]+/;
     if(regexfname.test(fname.value)){
-        console.log("Correct Name")
+        let na = "Correct Name"
+        na
+        console.log()
     }else{
         console.log("Numbers are not allowed");
     }
