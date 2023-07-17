@@ -16,7 +16,7 @@
     <form action="">
         <label for="FName">Enter a FName:</label>
         <input type="text" id="FName" onkeyup="checkFname()">
-        <small id="check" class="form-text text-danger"></small>
+        <small  id="check" class="form-text text-danger"></small>
         <br>
         <label for="LName">Enter a LName:</label>
         <input type="text" id="LName" onkeyup="checkLname()">
@@ -44,14 +44,14 @@
         <br>
     </form>
     <script>
+      let  formm= document.forms[0]
+     let smalll= formm.getElementsByClassName("form-text")
         function checkFname() {
-            const inputname = document.getElementById('FName').value;
-
+            
             const regex = /^[\d]*$/;
             if (regex.test(inputname)) {
+                
                 document.getElementById('check').innerHTML = 'The name should contain only letters.';
-            } else {
-                document.getElementById('check').innerHTML = 'The first name is true';
             }
 
         }
@@ -61,31 +61,26 @@
             const regex = /^[\d]*$/;
             if (regex.test(inputLname)) {
                 document.getElementById('checkl').innerHTML = 'The name should contain only letters.';
-            } else {
-                document.getElementById('checkl').innerHTML = 'The last name is true';
-            }
-
+            } 
         }
         function checkBirth() {
             const inputBirth = document.getElementById('Birth').value;
             const regex = /^(0?[1-9]|[1-2][0-9]|3[0-1])-(0?[1-9]|1[0-2])-\d{4}$/
 
             if (!regex.test(inputBirth)) {
+               let corect= document.getElementById('checkB')
                 document.getElementById('checkB').innerHTML = 'The Birth date should be dd-mm-yyyy.';
+
             }
-            else {
-                document.getElementById('checkB').innerHTML = 'The Birth date is true';
-            }
+          
         }
         function checkEmail() {
             const inputemail = document.getElementById('email').value;
-            const regex = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{3}$/
+            const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
             if (!regex.test(inputemail)) {
                 document.getElementById('checkE').innerHTML = 'The email  not true';
             }
-            else {
-                document.getElementById('checkE').innerHTML = 'The email is true';
-            }
+         
         }
         function checkEmailconfirm() {
             const inputemailc = document.getElementById('emailconfirm').value;
@@ -93,9 +88,7 @@
             if (!regex.test(inputemailc)) {
                 document.getElementById('checkEC').innerHTML = 'The email  not true';
             }
-            else {
-                document.getElementById('checkEC').innerHTML = 'The email is true';
-            }
+      
         }
         function checkPassword(){
             const inputpass = document.getElementById('password').value;
@@ -103,9 +96,7 @@
             if (!regex.test(inputpass)) {
                 document.getElementById('checkP').innerHTML = 'The password  not true';
             }
-            else {
-                document.getElementById('checkP').innerHTML = 'The password is true';
-            }
+       
         }
         function checkpassconfirm(){
             const inputpass = document.getElementById('passconfirm').value;
@@ -113,9 +104,7 @@
             if (!regex.test(inputpass)) {
                 document.getElementById('checkPC').innerHTML = 'The password  not true';
             }
-            else {
-                document.getElementById('checkPC').innerHTML = 'The password is true';
-            } 
+        
         }
     </script>
     <!-- Optional JavaScript -->
