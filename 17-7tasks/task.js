@@ -1,6 +1,5 @@
 let button = document.getElementById("button")
 let tbody=document.getElementById("tbody")
-let td=tbody.value
 let htt = new XMLHttpRequest();
 htt.open("GET","task.json")
 button.onclick = function(){
@@ -17,12 +16,9 @@ button.onclick = function(){
 <img src="${httjs.images[i]}" alt="">
    </td>
  </tr>
- <br>`
- 
- 
+`
 }
 tbody.innerHTML=ahmad;
 
 }
 htt.send();
-
