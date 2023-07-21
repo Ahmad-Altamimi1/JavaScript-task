@@ -1,0 +1,56 @@
+#p_edit{
+display: none;
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    color: darkgoldenrod;
+}
+#text{
+    height: 58px;
+    width: 90%;
+    border: 5px solid blueviolet;
+    font-size: 30px;
+    position: relative;
+}
+#add{
+   
+    background-color: aqua;
+    border: none;
+    height: 70px;
+    width: 80px;
+    border: 5px solid blueviolet;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+}
+.alwai{
+
+}
+#search{
+height: 40px;
+width: 261px;
+border: blue 1px solid;
+}
+#par{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#edit,#clear{
+width: 70px;
+height: 60px;
+color: white;
+font-size: 20px;
+text-transform: capitalize;
+background-color: black;
+border: none;
+margin-left: 10px;
+}
+button{
+    cursor: pointer;
+}

@@ -1,140 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="fname">Enter a fname :</label>
+    <br />
+    <input onchange="f_name()" id="fname" type="text" /><span
+      class="fname"></span>
+    <br />
+    <br />
+    <label for="lname">Enter a lname :</label>
+    <br />
+    <input onchange="l_name()" id="lname" type="text" /><span
+      class="fname"></span>
+    <br /><br />
+    <label for="date">Enter a bdate :</label>
+    <br />
+    <input onchange="date()" id="date" type="text" /><span class="fname"></span>
+    <br /><br />
+    <label for="email">Enter an email :</label>
+    <br />
+    <input onchange="email()" id="email" type="text" /><span
+      class="fname"></span>
+    <br /><br />
+    <label for="confirm">Confirm Email :</label><br />
 
-<head>
-    <title>Task3</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
-    <form action="">
-        <label for="FName">Enter a FName:</label>
-        <input type="text" id="FName" onkeyup="checkFname()">
-        <small  id="check" class="form-text text-danger"></small>
-        <br>
-        <label for="LName">Enter a LName:</label>
-        <input type="text" id="LName" onkeyup="checkLname()">
-        <small id="checkl" class="form-text text-danger"></small>
-        <br>
-        <label for="Birth">Enter a Bdate:</label>
-        <input type="text" id="Birth" onkeyup="checkBirth()">
-        <small id="checkB" class="form-text text-danger"></small>
-        <br>
-        <label for="email">Enter an email:</label>
-        <input type="email" id="email" onkeyup="checkEmail()">
-        <small id="checkE" class="form-text text-danger"> </small>
-        <br>
-        <label for="emailconfirm">Confirm Email:</label>
-        <input type="email" id="emailconfirm" onkeyup="checkEmailconfirm()">
-        <small id="checkEC" class="form-text text-danger"></small>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" onkeyup="checkPassword()">
-        <small id="checkP" class="form-text text-danger"></small>
-        <br>
-        <label for="passconfirm">Confirm password:</label>
-        <input type="text" id="passconfirm" onkeyup="checkpassconfirm()">
-        <small id="checkPC" class="form-text text-danger"></small>
-        <br>
-    </form>
-    <script>
-      let  formm= document.forms[0]
-     let smalll= formm.getElementsByClassName("form-text")
-        function checkFname() {
-            
-            const regex = /^[\d]*$/;
-            if (regex.test(inputname)) {
-                
-              document.getElementById('check').innerHTML = 'The name should contain only letters.';
-            }
-
-        }
-        function checkLname() {
-            const inputLname = document.getElementById('LName').value;
-
-            const regex = /^[\d]*$/;
-            if (regex.test(inputLname)) {
-                document.getElementById('checkl').innerHTML = 'The name should contain only letters.';
-            } 
-        }
-        function checkBirth() {
-            const inputBirth = document.getElementById('Birth').value;
-            const regex = /^(0?[1-9]|[1-2][0-9]|3[0-1])-(0?[1-9]|1[0-2])-\d{4}$/
-
-            if (!regex.test(inputBirth)) {
-               let corect= document.getElementById('checkB')
-                document.getElementById('checkB').innerHTML = 'The Birth date should be dd-mm-yyyy.';
-
-            }
-          
-        }
-        function checkEmail() {
-            const inputemail = document.getElementById('email').value;
-            const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-            if (!regex.test(inputemail)) {
-                document.getElementById('checkE').innerHTML = 'The email  not true';
-            }
-         
-        }
-        function checkEmailconfirm() {
-            const inputemailc = document.getElementById('emailconfirm').value;
-            const regex = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{3}$/
-            if (!regex.test(inputemailc)) {
-                document.getElementById('checkEC').innerHTML = 'The email  not true';
-            }
-      
-        }
-        function checkPassword(){
-            const inputpass = document.getElementById('password').value;
-            const regex= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-            if (!regex.test(inputpass)) {
-                document.getElementById('checkP').innerHTML = 'The password  not true';
-            }
-       
-        }
-        function checkpassconfirm(){
-            const inputpass = document.getElementById('passconfirm').value;
-            const regex= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d @]{8,}$/;
-            if (!regex.test(inputpass)) {
-                document.getElementById('checkPC').innerHTML = 'The password  not true';
-            }
-        
-        }
-    </script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-
+    <input onchange="confirm_email()" id="confirm" type="text" /><span
+      class="fname"></span>
+    <br /><br />
+    <label for="Password">Enter a Password :</label>
+    <br />
+    <input onchange="password()" id="Password" type="text" /><span
+      class="fname"></span>
+    <br /><br />
+    <label for="conpass">Confirm Password :</label>
+    <br />
+    <input onchange="confirm_pass()" id="conpass" type="text" /><span
+      class="fname"></span>
+    <script src="task3.js"></script>
+  </body>
 </html>
-    <!-- <label for="name">Entar a FName :</label>
-    <input type="text" name="Fname" id="fname"><br>
-    <span id="pname">hi</span>
-    <label for="name">Entar a LName :</label>
-    <input type="text" name="Lname" id="lname"><br><br>
-    <label for="name">Entar a Date :</label>
-    <input type="date" name="Date" id="Date"><br><br>
-    <label for="name">Entar a email :</label>
-    <input type="email" name="email" id="email"><br><br>
-    <label for="name">confirm Email :</label>
-    <input type="email" name="conemail" id="conemail"><br><br>
-    <label for="name">password :</label>
-    <input type="password" name="password" id="password"><br><br>
-    <label for="name">confirm password :</label>
-    <input type="password" name="confpassword" id="confpassword"><br><br>
-   -->
-

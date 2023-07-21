@@ -12,7 +12,7 @@
         if (i>3) {
             i =0
        }
-        console.log(httpp.data[1].id)
+   
      contnt1 =`
            <p> id: ${httpp.data[i].id} </p>
           <img src= "${httpp.data[i].avatar}" > 
