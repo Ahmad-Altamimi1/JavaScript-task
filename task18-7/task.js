@@ -40,7 +40,6 @@
                 // console.log(httpp.data[1].id[1])
                     }
         
-    // }
-// }
+
  
  get()

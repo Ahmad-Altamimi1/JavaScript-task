@@ -40,10 +40,12 @@ border: blue 1px solid;
     flex-direction: column;
     gap: 70px;
 }
-
+#clear{
+    background-color: red !important;
+}
 #edit,#clear{
 width: 70px;
-height: 60px;
+height: 40px;
 color: white;
 font-size: 20px;
 text-transform: capitalize;

@@ -1,5 +1,4 @@
-console.log('Here is : ', 'Object')
-
+console.log("Here is : ", "Object");
 
 /*
 1
@@ -7,25 +6,31 @@ Create an object represents you
 have your first name, last name, age, dob(date of birth), favorite food (3),favorite movie (5)
 */
 
-class person{
- constructor(fname,lastname,age,dob,food,movie){
-  this.firstName=fname;
-  this.lastName=lastname;
-  this.age=age;
-  this.date=dob;
-  this.food=food;
-  this.moves=movie
- }
+class person {
+  constructor(fname, lastname, age, dob, food, movie) {
+    this.firstName = fname;
+    this.lastName = lastname;
+    this.age = age;
+    this.date = dob;
+    this.food = food;
+    this.moves = movie;
+  }
 }
-let firstperson= new person("Ahmad","Altamimi","23,16/5/199",["dawale","Mansf","shawrma"],["a","b","c","d","r"])
+let firstperson = new person(
+  "Ahmad",
+  "Altamimi",
+  "23,16/5/199",
+  ["dawale", "Mansf", "shawrma"],
+  ["a", "b", "c", "d", "r"]
+);
 
-console.log(firstperson)
+console.log(firstperson);
 var persons = [
-  { name: { first: 'John', last: 'Hob' }, age: 35 },
-  { name: { first: 'Alex', last: 'Mercer' }, age: 25 },
-  { name: { first: 'Alice', last: 'Zaheer' }, age: 24 },
-  { name: { first: 'Zues', last: 'Odin' }, age: 55 },
-  { name: { first: 'Soso', last: 'Al-Amora' }, age: 67 }
+  { name: { first: "John", last: "Hob" }, age: 35 },
+  { name: { first: "Alex", last: "Mercer" }, age: 25 },
+  { name: { first: "Alice", last: "Zaheer" }, age: 24 },
+  { name: { first: "Zues", last: "Odin" }, age: 55 },
+  { name: { first: "Soso", last: "Al-Amora" }, age: 67 },
 ];
 
 /*
@@ -37,8 +42,13 @@ and return all the first name of the person insides
 
 Ex: firstName(persons) => ['John', 'Alex', 'Alice', 'Thor', 'Soso']
 */
-
-
+function firstName(arr) {
+  let firstName1 = arr.map(function (el) {
+    return el.name.first;
+  });
+  return firstName1;
+}
+console.log(firstName(persons));
 /*
 3
 Using the varabile persons
@@ -48,8 +58,14 @@ and return the average age of those persons
 
 Ex: averageAge(persons) => 41.2
 */
-
-
+function averageAge(arr) {
+  let averageAge1 =
+    arr.reduce(function (acc, cu) {
+      return acc + cu.age;
+    }, 0) / arr.length;
+  return averageAge1;
+}
+console.log(averageAge(persons));
 /*
 4
 Using the varabile persons
@@ -59,8 +75,14 @@ and return the full name of the older person
 
 Ex: olderPerson(persons) => "Soso Al-Amora"
 */
-
-
+function olderPerson(arr) {
+  let olderPerson1 = arr.reduce(function (acc, cu) {
+    // console.log(cu)
+    return cu.age > acc.age ? cu : acc;
+  });
+  return olderPerson1.name.first + olderPerson1.name.last;
+}
+console.log(olderPerson(persons));
 /*
 5
 Using the varabile persons
@@ -70,8 +92,14 @@ and return the full name of the person have longest full name
 
 Ex: longestName(persons) => "Soso Al-Amora"
 */
-
-
+function longestName(arr) {
+  let ahmad = arr.reduce(function (acc, cu) {
+    cu = cu.name.first + cu.name.last;
+    return cu.length > acc.length ? cu : acc;
+  }, "");
+  return ahmad;
+}
+console.log(longestName(persons));
 /*
 6
 Using the varabile persons
@@ -106,8 +134,17 @@ Ex: repeatWord("My name is alex mercer class name B baba mama hello Hello HELLO"
   hello:3
 }
 */
+let obj = {};
+string="My name is alex mercer class name B baba mama hello Hello HELLO";
+let repeatWord1 = string.split(" ");
+repeatWord1.map(function (el,index,arr) {
+  
+})
+for (const index of Object.keys(repeatWord1)) {
+  obj[`${index}`] = repeatWord1[index];
+}
 
-
+console.log(obj);
 
 /*
 8
@@ -121,7 +158,6 @@ Ex: repeatChar("mamababatetacedo")
 => { m:2,  a:5, b:2, t2:, e:2, c:1, d:1, o:1}
 */
 
-
 /*
 9
 Create a function called selectFromObject
@@ -131,7 +167,6 @@ and return an object have the key that inside the array
 Ex: selectFromObject({a: 1, cat: 3}, ['a', 'cat', 'd'])
 =>  {a: 1, cat: 3}
 */
-
 
 /*
 10
@@ -143,7 +178,6 @@ Ex: objectToArray({firstName:"Moh",age:24})
 => ["firstName","Moh","age",24]
 */
 
-
 /*
 11
 Create a function called arrayToObject
@@ -153,7 +187,6 @@ and return an object of the keys and values in this object
 Ex: arrayToObject(["firstName","Moh","age",24])
 => {firstName:"Moh",age:24}
 */
-
 
 /*
 12
@@ -166,7 +199,6 @@ Ex: onlyNumber({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {age:24}
 */
 
-
 /*
 13
 Create a function called onlyString
@@ -177,7 +209,6 @@ and return a new object that have only the values that is a string
 Ex: onlyString({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {firstName:"Moh"}
 */
-
 
 /*
 14
@@ -190,7 +221,6 @@ Ex: onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => {movies:[1,5,"string"]}
 */
 
-
 /*
 15
 Create a function called keysArray
@@ -201,7 +231,6 @@ Ex: keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 => ['firstName', 'age', 'movies']
 
 */
-
 
 /*
 16
@@ -214,14 +243,12 @@ Ex: keysArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
 
 */
 
-
 /*
 17
 make this object => {a:1,b:3,c:4}
 to be this object {a:4,c:66}
 **hint: Search on MDN how to remove a key/value from an object
 */
-
 
 /*
 18
@@ -233,7 +260,6 @@ Ex: keysArray({a:1,b:2,c:3,d:4})
 => 4
 */
 
-
 /*
 19
 Create a function called evenValue
@@ -243,7 +269,6 @@ and return a new object that have only the key/values if the value is even
 Ex: evenValue({a:1, b:2, c:3, d:4})
 => {b:2, d:4}
 */
-
 
 /*
 20
